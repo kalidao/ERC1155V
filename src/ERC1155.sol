@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.8.4;
 
 /// @notice A generic interface for a contract which properly accepts ERC-1155 tokens.
