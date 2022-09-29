@@ -1,18 +1,18 @@
-// SPDX-License-Identifier: AGPL-3.0-only
-pragma solidity ^0.8.15;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.4;
 
-import {Script} from 'forge-std/Script.sol';
+import {Script} from "forge-std/Script.sol";
 
-import {Greeter} from "src/Greeter.sol";
+import {ERC1155V} from "src/ERC1155V.sol";
 
 /// @notice A very simple deployment script
 contract Deploy is Script {
 
   /// @notice The main script entrypoint
   /// @return greeter The deployed contract
-  function run() external returns (Greeter greeter) {
+  function run() external returns (ERC1155V vToken) {
     vm.startBroadcast();
-    greeter = new Greeter("GM");
+    vToken = new ERC1155V();
     vm.stopBroadcast();
   }
 }
