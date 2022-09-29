@@ -40,25 +40,6 @@ jobs:
 
       - name: Check gas snapshots
         run: forge snapshot --check
-
-  slither:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Install Foundry
-        uses: foundry-rs/foundry-toolchain@v1
-        with:
-          version: nightly
-
-      - name: Install deps
-        run: forge install
-
-      - name: Check contract sizes
-        run: forge build --sizes
         
   scripts:
     strategy:
