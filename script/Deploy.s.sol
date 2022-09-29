@@ -9,7 +9,7 @@ import {ERC1155VToken} from "src/ERC1155VToken.sol";
 contract Deploy is Script {
 
   /// @notice The main script entrypoint
-  /// @return greeter The deployed contract
+  /// @return vToken The deployed contract
   function run() external returns (ERC1155VToken vToken) {
     vm.startBroadcast();
     vToken = new ERC1155VToken();
